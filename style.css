@@ -1,11 +1,12 @@
+/* Starting CSS with some minor global properties */
 body{
-    /* margin: 50px 20px; */
     font-family: Arial, Helvetica, serif;
     font-size: 13px;
     background: url("./rain-drops.jpg") fixed no-repeat;
     background-size: cover;
 }
 *{
+    flex-shrink: 0;
     box-sizing: border-box;
     letter-spacing: 1px;
     outline: none;
@@ -14,12 +15,19 @@ body{
 i:hover{
     cursor: pointer;
 }
+/* Starting component wise css */
+.icon{
+    margin-right: 5px;
+}
+/* Top header of page having two bars title bar(named as top) and menu bar */
 header{
     height: 7rem;
+    font-size: 1rem;
 }
 header *{
     color: #fff;
 }
+/* common properties of both the bars */
 .bar{
     height:3rem;
     position: fixed;
@@ -28,11 +36,13 @@ header *{
     width: 100%;
     padding: 10px 20px;
 }
-.bar,.bar span{
+.bar{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
 }
+/* seperate declaration of both bars to add unique properties */
 .top{
     background-color:rgba(51, 111, 127,0.6);
     top:0;
@@ -42,7 +52,17 @@ header *{
     top:3rem;
     justify-content: space-between;
 }
-.top span, .top input{
+/* styling the icons within the bars */
+.bar i{
+    font-size: 1rem;
+}
+.bar > div{
+    height: 100%;
+    width:auto;
+    display: flex;
+    justify-content: space-between;
+}
+.top >div div, .top input{
     background-color: #117e9c;
     border-radius: 4px;
     padding: 5px;
@@ -50,17 +70,16 @@ header *{
     margin-left: 10px;
     height: 100%;
 }
-.bar i{
-    font-size: 1rem;
-}
+
 input:focus{
     background-color: #fff;
     color: #000;
 }
-.right{
-    align-self: flex-end;
-    justify-self: flex-end;
+.hover:hover *{
+    cursor: pointer;
+    color: #d1d1d1;
 }
+/* Name of the app in bakdrop of title bar */
 #name{
     display: inline-block;
     width: 100%;
@@ -71,13 +90,17 @@ input:focus{
     text-align: center;
     background-color:transparent;
     border-radius: 0;
+    padding-top: 1rem;
 }
+
+/* End of header file */
 main{
     margin-top: 0;
     display: flex;
     align-items: flex-start;
-    flex-shrink: 0;
+    
 }
+
 .box{
     background-color: #dbdfdf;
     color:#555;
@@ -87,7 +110,7 @@ main{
     flex-direction: column;
     align-items: flex-start;
     border-radius: 4px;
-    flex-shrink: 0;
+    
     min-width:240px;
 }
 .box > *{
