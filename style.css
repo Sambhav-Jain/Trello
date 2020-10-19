@@ -1,10 +1,14 @@
 body{
     margin: 50px 20px;
     font-family: Arial, Helvetica, serif;
-    font-size: 14px;
+    font-size: 13px;
+    background: url("./rain-drops.jpg") fixed no-repeat;
 }
 *{
     box-sizing: border-box;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
 }
 main{
     display: flex;
@@ -49,6 +53,13 @@ main{
     background-color: #f4f5f5;
     cursor: pointer;
 }
+.pen > i{
+    visibility: hidden;
+    float: right;
+}
+.pen:hover > i{
+    visibility: visible;
+}
 .add-another-card{
     margin-bottom: 0;
 }
@@ -58,4 +69,35 @@ main{
 .add-another-card:hover{
     color: #888;
     cursor: pointer;   
+}
+
+textarea{
+    resize: none;
+    height: 4rem;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+}
+.add{
+    display: flex;
+    text-align: center;
+}
+.add button{
+    background-color: #808000;
+    font-size: 1rem;
+    line-height: 20px;
+    padding: 7px;
+    margin-right: 10px;
+    color:#fff;
+    border-radius: 4px;
+}
+.add button:hover{
+    background-color:#9d9f44;
+}
+.add .cls{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.add .cls:hover{
+    color:#808180;
 }
