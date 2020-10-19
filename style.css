@@ -1,8 +1,9 @@
 body{
-    margin: 50px 20px;
+    /* margin: 50px 20px; */
     font-family: Arial, Helvetica, serif;
     font-size: 13px;
     background: url("./rain-drops.jpg") fixed no-repeat;
+    background-size: cover;
 }
 *{
     box-sizing: border-box;
@@ -10,7 +11,69 @@ body{
     outline: none;
     border: none;
 }
+i:hover{
+    cursor: pointer;
+}
+header{
+    height: 7rem;
+}
+header *{
+    color: #fff;
+}
+.bar{
+    height:3rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 20px;
+}
+.bar,.bar span{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.top{
+    background-color:rgba(51, 111, 127,0.6);
+    top:0;
+}
+.menu{
+    background-color:rgba(62, 79, 68,0.4);
+    top:3rem;
+    justify-content: space-between;
+}
+.top span, .top input{
+    background-color: #117e9c;
+    border-radius: 4px;
+    padding: 5px;
+    line-height: 20px;
+    margin-left: 10px;
+    height: 100%;
+}
+.bar i{
+    font-size: 1rem;
+}
+input:focus{
+    background-color: #fff;
+    color: #000;
+}
+.right{
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+#name{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -999;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:transparent;
+    border-radius: 0;
+}
 main{
+    margin-top: 0;
     display: flex;
     align-items: flex-start;
     flex-shrink: 0;
